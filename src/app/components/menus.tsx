@@ -39,9 +39,10 @@ export function Menus() {
     fetchData();
   }, []);
 
-  
+  console.log(infor)
   return (
     <div className="flex flex-col  w-full font-black   pt-3">
+      <Link href="/" className="hover:border-b-3 hover:border-blue-600 w-fit" >Home</Link>
       {infor.map((info) => (
         <div key={info.id}>
           <Link
