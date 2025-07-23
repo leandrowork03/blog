@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Estilo base */
+body {
+ background-image: url('/images/montain.png');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* cor de fundo no modo claro */
+  @apply bg-blue-400 text-black;
+}
+
+/* cor de fundo no modo escuro */
+html.dark body {
+  @apply bg-gray-900 text-white;
+}
