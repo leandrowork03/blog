@@ -1,5 +1,5 @@
 
-//src/app/components/menu.tsx
+//src/app/components/menus.tsx
 "use client";
 
 import { Information } from "@/types/info";

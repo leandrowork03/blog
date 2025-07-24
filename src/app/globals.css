@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
-/* Estilo base */
+/* MODO CLARO */
 body {
- background-image: url('/images/montain.png');
+  @apply text-white;
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image:
+    url('/images/city.png'),   /* imagem fixa sempre visível */
+    url('/images/ceu.jpg');    /* imagem de fundo clara */
 
-  /* cor de fundo no modo claro */
-  @apply bg-blue-400 text-black;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  background-position: bottom, center;
 }
 
-/* cor de fundo no modo escuro */
+/* MODO ESCURO */
 html.dark body {
-  @apply bg-gray-900 text-white;
+  @apply text-white;
+
+  background-image:
+    url('/images/city.png'),   /* mesma imagem da frente */
+    url('/images/night.jpg');  /* imagem de fundo escura */
 }
