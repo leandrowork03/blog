@@ -1,3 +1,4 @@
+// src/lib/mockData.ts
 export const mockPosts = [
   {
     id: '1',
@@ -50,7 +51,7 @@ Gerenciamento de Favoritos Personalizado
 </h3>
 <p>
 Uma funcionalidade chave é a capacidade de criar e manter uma lista personalizada de animes favoritos.
-Isso permite que os usuários salvem e acessem rapidamente suas séries e filmes preferidos.
+Em <strong>AnimeHypez</strong>, essa funcionalidade permite aos usuários salvar e acessar rapidamente suas séries e filmes preferidos.
 </p>
 
 <h2 class="text-violet-600 text-2xl font-semibold py-4">
@@ -106,12 +107,13 @@ limpa e, o mais importante, totalmente responsiva. Isso significa que o AnimeHyp
 usuário consistente e agradável em qualquer dispositivo e tamanho de tela.
 </p>
 `,
-    imageUrl: '/images/cap1.png',
+    imageUrl: ['/images/cap1.png', '/images/cap12.png', '/images/cap13.png', '/images/cap14.png', '/images/cap15.png']
   },
   {
     id: '2',
     title: 'Segundo Post',
     content: 'Conteúdo do segundo post',
-    imageUrl: '/images/post2.jpg',
+    imageUrl: ['/images/post2.jpg'], // Corrigido para ser uma array, como no schema
   },
 ];
+

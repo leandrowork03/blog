@@ -1,8 +1,10 @@
+// src/app/page.tsx
 'use client'
 
 import { gql, useQuery } from '@apollo/client'
 import client from '@/lib/apolloClient'
 import Image from 'next/image'
+import { Post } from '@/types/info'; // <-- AGORA ESTÁ IMPORTANDO 'Post'
 
 const GET_POSTS = gql`
   query {
@@ -16,17 +18,12 @@ const GET_POSTS = gql`
 `
 
 export default function Home() {
-  const { data, loading, error } = useQuery(GET_POSTS)
+  const { data, loading, error } = useQuery<{ posts: Post[] }>(GET_POSTS, { client });
 
   if (loading) return <p>Carregando posts...</p>
   if (error) return <p>Erro: {error.message}</p>
 
-  // Console.log para verificar o URL da imagem
-  if (data && data.posts) {
-    data.posts.forEach((post: any) => {
-      console.log(`Verificando Post ID: ${post.id}, Image URL:`, post.imageUrl);
-    });
-  }
+  if (!data || !data.posts) return null;
 
   return (
     <div>
@@ -71,16 +68,20 @@ export default function Home() {
       />
 
       <ul>
-        {data.posts.map((post: any) => (
+        {data.posts.map((post: Post) => (
           <li key={post.id} className="my-6 border-b border-gray-600 pb-6">
             <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-            <Image
-              src={post.imageUrl}
-              alt={post.title}
-              width={600}
-              height={400}
-              className="rounded-lg"
-            />
+            
+            {post.imageUrl && post.imageUrl.length > 0 && (
+              <Image
+                src={post.imageUrl[0]}
+                alt={post.title}
+                width={600}
+                height={400}
+                className="rounded-lg object-cover mb-4"
+                unoptimized={true}
+              />
+            )}
 
             <div
               className="prose max-w-none text-white"

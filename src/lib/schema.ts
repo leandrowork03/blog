@@ -1,6 +1,6 @@
 // src/lib/schema.ts
 import { createSchema } from 'graphql-yoga'
-import { mockPosts } from './mockData'; // Certifique-se que mockData.ts existe e está correto
+import { mockPosts } from './mockData';
 
 export const schema = createSchema({
   typeDefs: `
@@ -8,7 +8,7 @@ export const schema = createSchema({
       id: ID!
       title: String!
       content: String!
-      imageUrl: String
+      imageUrl: [String]
     }
 
     type Query {
@@ -25,3 +25,4 @@ export const schema = createSchema({
     },
   },
 })
+

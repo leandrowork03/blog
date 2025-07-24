@@ -1,14 +1,10 @@
+// src/app/posts/[id]/page.tsx
 import { notFound } from "next/navigation";
-import Image from 'next/image'; // Importar o componente Image do Next.js
+import Image from 'next/image';
+import { Post, InformationParams } from '@/types/info'; // <-- AGORA IMPORTA 'Post' E 'InformationParams'
 
-// Define os tipos padrão já com Promise
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
-
-export default async function PostPage(props: PageProps) {
-  // Resolve o promise antes de usar
-  const { id } = await props.params;
+export default async function PostPage({ params }: InformationParams) {
+  const { id } = params;
 
   const res = await fetch("http://localhost:3000/api/graphql", {
     method: "POST",
@@ -31,26 +27,34 @@ export default async function PostPage(props: PageProps) {
 
   const { data } = await res.json();
 
-  if (!data?.post) return notFound();
+  const postData: Post = data?.post; 
 
-  const { title, content, imageUrl } = data.post;
+  if (!postData) return notFound();
+
+  const { title, content, imageUrl } = postData;
 
   return (
     <article>
-      <h1 className="text-sky-700 text-4xl font-bold py-6">{title}</h1> {/* Adicionei algumas classes para combinar com o visual */}
-      {imageUrl && (
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={800} // Ajuste a largura conforme sua necessidade
-          height={500} // Ajuste a altura conforme sua necessidade
-          className="rounded-lg mb-6" // Adicionei algumas classes de estilo
-          unoptimized={true} // Use unoptimized se as imagens forem locais e você não quiser a otimização padrão do Next.js
-        />
+      <h1 className="text-sky-700 text-4xl font-bold py-6">{title}</h1>
+      
+      {imageUrl && imageUrl.length > 0 && (
+        <div className="flex flex-wrap gap-6 mb-8 justify-center">
+          {imageUrl.map((url: string, index: number) => (
+            <Image
+              key={`${id}-${index}`}
+              src={url}
+              alt={`${title} imagem ${index + 1}`}
+              width={600}
+              height={400}
+              className="rounded-lg object-cover shadow-lg"
+              unoptimized={true}
+            />
+          ))}
+        </div>
       )}
-      {/* AQUI ESTÁ A MUDANÇA PRINCIPAL: usando dangerouslySetInnerHTML */}
+
       <div
-        className="prose max-w-none text-white" // Mantenha as classes do Tailwind CSS se você usa @tailwindcss/typography
+        className="prose max-w-none text-white"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </article>
