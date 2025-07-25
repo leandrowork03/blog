@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Meu Portfólio de Projetos Web
 
-## Getting Started
+Bem-vindo ao meu portfólio de projetos! Este repositório é uma vitrine do meu trabalho como Desenvolvedor Front-End, com foco em tecnologias modernas e práticas robustas. Aqui você encontra projetos que demonstram minhas habilidades em **React**, **Next.js**, **TypeScript**, **GraphQL** e **Tailwind CSS**.
 
-First, run the development server:
+Cada projeto reflete minha paixão por transformar ideias em soluções digitais funcionais, modernas e visualmente atraentes.
 
-```bash
+---
+
+## ✨ Tecnologias Utilizadas
+
+Este portfólio foi desenvolvido com as seguintes tecnologias:
+
+- **Next.js 14 (App Router):** Framework React com SSR e SSG para apps escaláveis e performáticos.
+- **React:** Biblioteca para criação de interfaces interativas.
+- **TypeScript:** Tipagem estática que traz mais segurança e produtividade ao código.
+- **GraphQL:** Linguagem de consulta para APIs, usada aqui com dados mockados.
+- **GraphQL Yoga:** Servidor GraphQL rápido e flexível.
+- **Apollo Client:** Gerencia requisições e cache GraphQL no client.
+- **Tailwind CSS:** Framework utilitário para estilização rápida e responsiva.
+
+---
+
+## 💡 Funcionalidades
+
+- **Página Inicial Dinâmica:** Exibe um resumo pessoal e destaques dos projetos.
+- **Seção "Sobre Mim":** Minha trajetória, paixões e visão como dev.
+- **Galeria de Projetos Interativa:**
+  - Cards com imagem de capa.
+  - Página individual com detalhes e modal de imagens (ImageGridModal).
+- **GraphQL Mockado:** Demonstração de integração eficiente com APIs.
+- **Design Responsivo:** Layout adaptado para qualquer dispositivo.
+- **Componentes Reutilizáveis:** Arquitetura modular com React/Next.js.
+
+---
+
+## 🛠️ Como Rodar Localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+
+##
+
+Instale as dependências:
+
+bash
+Copiar
+Editar
+npm install
+# ou
+yarn install
+Crie o arquivo .env.local:
+
+env
+Copiar
+Editar
+NEXT_PUBLIC_GRAPHQL_API_URL=http://localhost:3000/api/graphql
+Inicie o servidor de desenvolvimento:
+
+bash
+Copiar
+Editar
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Acesse: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
