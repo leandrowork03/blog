@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaLinkedin, FaGithub, FaWhatsapp, FaEnvelope } from 'react-icons/fa'; // Importe os ícones
 
 export function Footer() {
-  const whatsappNumber = '5551987654321';
+  const whatsappNumber = '5551982126888';
   const emailAddress = 'leandrotrabalho03@gmail.com,';
 
   return (
