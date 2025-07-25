@@ -3,6 +3,7 @@ import './globals.css'
 import { Providers } from './providers'
 import { Menus } from './components/menus'
 import { ThemeToggle } from './components/ThemeToggle'
+import { Footer } from './components/footer'
 export const metadata = {
   title: 'Blog com GraphQL',
   description: 'Blog usando Next.js e GraphQL',
@@ -28,6 +29,7 @@ export default function RootLayout({
             <div className="max-w-5xl bg-black/80 rounded p-4">{children}</div>
 
           </div>
+          <Footer/>
         </Providers>
       </body>
     </html>

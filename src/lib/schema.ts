@@ -7,6 +7,7 @@ export const schema = createSchema({
     type Post {
       id: ID!
       title: String!
+      url: String!
       content: String!
       imageUrl: [String]
     }

@@ -1,8 +1,11 @@
+import { url } from "inspector";
+
 // src/lib/mockData.ts
 export const mockPosts = [
   {
     id: '1',
     title: 'Animes Hype Z',
+    url: 'https://animehypez.netlify.app/',
     content: `<h1 class="text-sky-700 text-4xl font-bold py-6">
 AnimeHypez: Uma Plataforma Interativa para Fãs de Anime
 </h1>
@@ -112,6 +115,7 @@ usuário consistente e agradável em qualquer dispositivo e tamanho de tela.
   {
     id: '2',
     title: 'Meu Portfólio Versão espacial',
+    url:'https://devleandrop.netlify.app/',
     content: `<h1 class="text-sky-700 text-4xl font-bold py-6">
 Portifólio V3: Uma Jornada Interativa Pela Carreira de um Desenvolvedor Web
 </h1>
@@ -229,6 +233,7 @@ O Que Isso Significa para Seu Portfólio
   {
     id: '3',
     title: 'Controle financeiro',
+    url:'https://controle-de-gastosf.netlify.app/',
     content: `<h1 class="text-sky-700 text-4xl font-bold py-6">
 Controle de Gastos: Gestão Financeira Pessoal e Familiar
 </h1>
@@ -308,6 +313,7 @@ combinando funcionalidades essenciais com um foco claro na colaboração e na si
   {
     id: '4',
     title: 'Liga da Justiça',
+    url: 'https://liga-da-justica.vercel.app/',
     content: `<div class="prose max-w-none">
   <h1 class="text-sky-700 text-4xl font-bold mb-4">Liga da Justiça: Uma Aventura Heroica na Web</h1>
   <p>O projeto Liga da Justiça é uma aplicação web interativa, cuidadosamente desenvolvida para imergir os usuários no universo dos maiores heróis da DC Comics. Com um foco em apresentação dinâmica de dados e uma experiência de usuário envolvente, esta plataforma celebra os icônicos membros da Liga da Justiça, permitindo explorar seus detalhes e habilidades de uma forma única e acessível.</p>
@@ -339,13 +345,14 @@ combinando funcionalidades essenciais com um foco claro na colaboração e na si
   {
     id: '5',
     title: 'LeagueBoard',
+    url: 'https://league-board-rho.vercel.app/',
     content: `<article class="prose prose-invert max-w-none">
   <h1 class="text-sky-700 text-3xl font-bold mb-4">
     LeagueBoard: Uma Solução Fullstack para o Gerenciamento de Ligas Esportivas e Competições
   </h1>
 
   <p>
-    O <strong>LeagueBoard</strong> emerge como uma aplicação web robusta e interativa, desenhada para ser o coração de qualquer liga ou competição, seja no universo dos e-sports, esportes tradicionais ou desafios amigáveis.
+    O <strong>LeagueBoard</strong> depende do render do back-end para rodar o front-end a versão gratuita nem sempre permite que o render funcione na hora em que o site abre, emerge como uma aplicação web robusta e interativa, desenhada para ser o coração de qualquer liga ou competição, seja no universo dos e-sports, esportes tradicionais ou desafios amigáveis.
     Mais do que um simples placar, este projeto fullstack oferece uma plataforma completa para a gestão e visualização dinâmica de classificações e estatísticas, garantindo que a informação flua de maneira eficiente do servidor para a tela do usuário.
   </p>
 
@@ -393,7 +400,7 @@ combinando funcionalidades essenciais com um foco claro na colaboração e na si
 </article>
 
 `,
-    imageUrl: ['/images/f1.png', '/images/f2.png', '/images/f3.png', '/images/f4.png', '/images/f5.png' ], // Corrigido para ser uma array, como no schema
+    imageUrl: ['/images/f1.png', '/images/f2.png', '/images/f3.png', '/images/f4.png', '/images/f5.png' ],
   },
  
 ];
