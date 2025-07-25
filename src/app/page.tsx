@@ -88,7 +88,7 @@ export default function Home() {
               key={post.id}
               href={`/posts/${post.id}`}
               
-              className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+              className="block bg-black/90 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
             >
               {post.imageUrl && post.imageUrl.length > 0 && (
                 <div className="relative w-full h-48 sm:h-56 lg:h-64 overflow-hidden">
