@@ -37,7 +37,7 @@ export function ThemeToggle() {
       aria-label="Toggle Dark Mode"
       title="Alternar modo escuro/claro"
     >
-      {isDark ? "☀️ Claro" : "🌙 Escuro"}
+      {isDark ? "☀️ Torne dia" : "🌙 Torne noite"}
     </button>
   );
 }

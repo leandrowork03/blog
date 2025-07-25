@@ -39,12 +39,15 @@ export default function Home() {
             className="w-30 rounded-full border-2"
           />
         </div>
-        <h1 className="font-black text-2xl md:text-4xl">
+        <div>
+          <h1 className="font-black text-2xl md:text-4xl">
          Leandro Santos 
         </h1>
+        <p className="text-green-500 font-black">Desenvolvedor Front-End</p>
+        </div>
       </header>
 
-      <section className="bg-black/90 p-5 rounded mb-8">
+      <section className="bg-black/90 p-5 rounded mt-10 mb-8">
         <h1 className="text-sky-700 text-2xl py-3">Sobre mim</h1>
         <p>
           Sou Leandro, desenvolvedor web focado em transformar ideias em
@@ -61,16 +64,20 @@ export default function Home() {
           mentalidade guia meu trabalho: foco, sinceridade e resolução de
           problemas com objetividade. Acredito que a tecnologia vai além das
           linhas de código, impactando diretamente a vida real e os dilemas
-          humanos. Projetos como Mega Man X me inspiram a pensar sobre o futuro
+          humanos. Histórias de jogos como Mega Man X me inspiram a pensar sobre o futuro
           e o significado por trás de cada criação. Assim, cada projeto que
           desenvolvo não é apenas um conjunto de algoritmos, mas uma extensão da
           minha visão de mundo.
         </p>
       </section>
+      <section className="my-3 bg-black/80 p-4">
+        <h1 className="text-3xl font-bold text-blue-600">Tecnologias usadas para fazer esse portfólio</h1>
+        <p className="text-2xl font-bold">Next.JS, React, TypeScript, GraphQL, GraphQL Yoga, Apollo Client, Tailwind</p>
+      </section>
 
       <section>
         <h2 className="text-sky-700 text-3xl font-bold py-6">
-          Meus Projetos e Artigos
+          Meus Projetos
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.posts.map((post: Post) => (
@@ -109,7 +116,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h1> tenologias</h1>
+          
           <TechStack/>
         </div>
       </section>

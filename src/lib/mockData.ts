@@ -114,7 +114,7 @@ usuário consistente e agradável em qualquer dispositivo e tamanho de tela.
   },
   {
     id: '2',
-    title: 'Meu Portfólio Versão espacial',
+    title: 'Portfólio Versão espacial',
     url:'https://devleandrop.netlify.app/',
     content: `<h1 class="text-sky-700 text-4xl font-bold py-6">
 Portifólio V3: Uma Jornada Interativa Pela Carreira de um Desenvolvedor Web

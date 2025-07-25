@@ -1,12 +1,12 @@
 //src/app/layout.tsx
 import './globals.css'
 import { Providers } from './providers'
-import { Menus } from './components/menus'
+import { Header } from './components/header'
 import { ThemeToggle } from './components/ThemeToggle'
 import { Footer } from './components/footer'
 export const metadata = {
-  title: 'Blog com GraphQL',
-  description: 'Blog usando Next.js e GraphQL',
+  title: 'Leandro Santos',
+  description: 'Portfólio',
 }
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
           <div className="flex flex-col md:flex-row min-h-screen max-w-7xl mx-auto gap-4 my-4">
             <div className="w-full md:w-64 bg-black/80 rounded p-4">
             <ThemeToggle />
-              <Menus />
+              <Header />
             </div>
             
             <div className="max-w-5xl bg-black/80 rounded p-4">{children}</div>

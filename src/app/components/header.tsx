@@ -4,8 +4,10 @@
 import { Post } from "@/types/info";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-export function Menus() {
+
+export function Header() {
   const [infor, setInfor] = useState<Post[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -59,7 +61,7 @@ export function Menus() {
   };
 
   return (
-    <div className="relative w-full md:w-4xl font-black pt-3 flex md:block justify-end" ref={menuRef}>
+    <div className="relative w-full md:w-4xl font-black pt-3 flex md:block justify-end items-center" ref={menuRef}>
       <button
         onClick={toggleMenu}
         className="md:hidden p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
@@ -86,7 +88,7 @@ export function Menus() {
           absolute md:relative
           top-0 right-0
           bg-gray-900 md:bg-transparent
-          w-64 md:w-auto
+          w-64 md:w-fit
           h-screen md:h-auto
           z-20
           p-4 md:p-0
@@ -116,6 +118,33 @@ export function Menus() {
             </Link>
           </div>
         ))}
+         <Link
+          href="https://www.linkedin.com/in/leandro-santos-front-end/"
+          target="_blank"
+          className="hover:border-b-3  text-blue-500 hover:border-blue-600 w-fit py-2 block flex items-center gap-4 overflow-hidden whitespace-nowrap text-ellipsis"
+          onClick={() => setIsOpen(false)}
+        >
+          Linkedin
+          <FaExternalLinkAlt/>
+        </Link>
+         <Link
+          href="https://github.com/leandrowork03"
+          target="_blank"
+          className="hover:border-b-3  text-gray-400 hover:border-blue-600 w-fit py-2 block flex items-center gap-4 overflow-hidden whitespace-nowrap text-ellipsis"
+          onClick={() => setIsOpen(false)}
+        >
+          GitHub
+          <FaExternalLinkAlt/>
+        </Link>
+         <Link
+          href="https://wa.me/5551982126888"
+          target="_blank"
+          className="hover:border-b-3 text-green-400 hover:border-blue-600 w-fit py-2 block flex items-center gap-4 overflow-hidden whitespace-nowrap text-ellipsis"
+          onClick={() => setIsOpen(false)}
+        >
+          Whatsapp
+          <FaExternalLinkAlt/>
+        </Link>
       </div>
     </div>
   );
