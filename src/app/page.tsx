@@ -3,10 +3,10 @@
 
 import { gql, useQuery } from "@apollo/client";
 import client from "@/lib/apolloClient";
-import Image from "next/image";
+import Image from "next/image"; 
 import Link from "next/link";
 import { Post } from "@/types/info";
-import { TechStack } from "./components/techs";
+import { TechStack } from "./components/techs"; 
 
 const GET_POSTS = gql`
   query {
@@ -33,16 +33,19 @@ export default function Home() {
     <div>
       <header className="flex flex-col md:flex-row items-center gap-10">
         <div className="flex flex-col justify-center items-center">
-          <img
+        
+          <Image
             src="/images/Leandro.jpg"
             alt="Leandro"
-            className="w-30 rounded-full border-2"
+            width={120} 
+            height={120}
+            className="w-30 rounded-full border-2 border-white" 
           />
         </div>
         <div>
           <h1 className="font-black text-2xl md:text-4xl">
-         Leandro Santos 
-        </h1>
+           Leandro Santos 
+          </h1>
         <p className="text-green-500 font-black">Desenvolvedor Front-End</p>
         </div>
       </header>
@@ -84,7 +87,7 @@ export default function Home() {
             <Link
               key={post.id}
               href={`/posts/${post.id}`}
-             
+              
               className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
             >
               {post.imageUrl && post.imageUrl.length > 0 && (
@@ -95,10 +98,10 @@ export default function Home() {
                     fill
                   
                     className="object-cover transition-transform duration-300 group-hover:scale-127"
-                    unoptimized={true}
+                   
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                 
+                  
                   <div className="absolute inset-0 bg-black/80 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="text-white  text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       Ver Mais
@@ -116,12 +119,10 @@ export default function Home() {
         </div>
 
         <div>
-          
-          <TechStack/>
+         
+          <TechStack/> 
         </div>
       </section>
     </div>
   );
 }
-
-

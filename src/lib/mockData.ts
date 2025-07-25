@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 // src/lib/mockData.ts
 export const mockPosts = [
   {
@@ -402,6 +400,5 @@ combinando funcionalidades essenciais com um foco claro na colaboração e na si
 `,
     imageUrl: ['/images/f1.png', '/images/f2.png', '/images/f3.png', '/images/f4.png', '/images/f5.png' ],
   },
- 
+  
 ];
-

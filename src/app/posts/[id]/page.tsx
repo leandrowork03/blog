@@ -5,7 +5,6 @@ import { Post, InformationParams } from '@/types/info';
 import Link from "next/link";
 
 
-
 export default async function PostPage({ params }: InformationParams) {
   const { id } = params;
 
@@ -35,7 +34,7 @@ export default async function PostPage({ params }: InformationParams) {
   const { data, errors } = await res.json(); 
 
   if (errors) {
-    console.error("Erro na query GraphQL:", errors);
+    console.error("Erro na query GraphQL para o post:", errors);
     
     return <p>Erro ao carregar o post. Tente novamente mais tarde.</p>;
   }
@@ -43,24 +42,22 @@ export default async function PostPage({ params }: InformationParams) {
   const postData: Post = data?.post; 
 
   if (!postData) {
-    console.log(`Post com ID ${id} não encontrado.`);
+    console.warn(`Post com ID ${id} não encontrado. Redirecionando para 404.`);
     return notFound();
   }
-
 
   const { title, content, imageUrl, url } = postData; 
 
  
+
   return (
     <article className="prose max-w-none text-white bg-black p-4 rounded-lg shadow-lg">
       <h1 className="text-sky-700 text-4xl font-bold py-6">{title}</h1>
       
-     
       {imageUrl && imageUrl.length > 0 && (
         <ImageGridModal images={imageUrl} title={title} />
       )}
 
-      
       {url && (
         <div className="my-10 text-center">
           <Link 
@@ -74,7 +71,6 @@ export default async function PostPage({ params }: InformationParams) {
         </div>
       )}
 
-   
       <div
         className="mt-8 text-gray-200 leading-relaxed" 
         dangerouslySetInnerHTML={{ __html: content }}
