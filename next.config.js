@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Adicione a configuração de 'images' aqui
+  
   images: {
     remotePatterns: [
       {
@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**', // Permite qualquer hostname, ajuste para seus domínios reais em produção
+        hostname: '**',
       },
     ],
   },

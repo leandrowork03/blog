@@ -1,12 +1,13 @@
+/*src/app/globals.css*/
+
 @import "tailwindcss";
 
-/* MODO CLARO */
 body {
   @apply text-white;
 
   background-image:
-    url('/images/city.png'),   /* imagem fixa sempre visível */
-    url('/images/ceu.jpg');    /* imagem de fundo clara */
+    url('/images/city.png'),  
+    url('/images/ceu.jpg');    
 
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
@@ -14,11 +15,12 @@ body {
   background-position: bottom, center;
 }
 
-/* MODO ESCURO */
+
 html.dark body {
   @apply text-white;
 
   background-image:
-    url('/images/city.png'),   /* mesma imagem da frente */
-    url('/images/night.jpg');  /* imagem de fundo escura */
+    url('/images/city.png'),  
+    url('/images/night.jpg');  
 }
+

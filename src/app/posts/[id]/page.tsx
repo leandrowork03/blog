@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 import ImageGridModal from '@/components/ImageGridModal'; 
 import { Post, InformationParams } from '@/types/info'; 
 import Link from "next/link";
-// Remova esta importação, ela é desnecessária e pode causar conflito ou confusão
-// import { url } from "inspector"; 
+
 
 export default async function PostPage({ params }: InformationParams) {
   const { id } = params;
@@ -35,7 +34,7 @@ export default async function PostPage({ params }: InformationParams) {
 
   if (!postData) return notFound();
 
-  // Desestruture 'url' junto com as outras propriedades
+  
   const { title, content, imageUrl, url } = postData; 
 
   return (
@@ -46,14 +45,14 @@ export default async function PostPage({ params }: InformationParams) {
         <ImageGridModal images={imageUrl} title={title} />
       )}
 
-      {/* Condicionalmente renderiza o link se 'url' existir */}
+     
       {url && (
-        <div className="my-10"> {/* Adicionei uma margem para espaçamento */}
+        <div className="my-10">
           <Link 
             href={url} 
-            target="_blank" // Abre o link em uma nova aba
-            rel="noopener noreferrer" // Recomendado para links com target="_blank" por segurança
-            className="text-white hover:text-blue-500 font-semibold text-2xl bg-blue-500 hover:bg-white p-3 rounded-2xl" // Estilo para o link
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white hover:text-blue-500 font-semibold text-2xl bg-blue-500 hover:bg-white p-3 rounded-2xl" 
           >
             clique aqui para ver o deploy!
           </Link>
@@ -67,3 +66,4 @@ export default async function PostPage({ params }: InformationParams) {
     </article>
   );
 }
+

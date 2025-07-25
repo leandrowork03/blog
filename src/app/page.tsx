@@ -38,10 +38,9 @@ export default function Home() {
             alt="Leandro"
             className="w-30 rounded-full border-2"
           />
-          <h1>Leandro</h1>
         </div>
         <h1 className="font-black text-2xl md:text-4xl">
-          Entre Códigos e Pensamentos
+         Leandro Santos 
         </h1>
       </header>
 
@@ -78,7 +77,7 @@ export default function Home() {
             <Link
               key={post.id}
               href={`/posts/${post.id}`}
-              // Adicionando 'group' aqui para que os elementos internos reajam ao hover do pai
+             
               className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
             >
               {post.imageUrl && post.imageUrl.length > 0 && (
@@ -87,13 +86,12 @@ export default function Home() {
                     src={post.imageUrl[0]}
                     alt={post.title}
                     fill
-                    // Adicionando 'transition-transform duration-300 group-hover:scale-105'
-                    // Isso faz com que a imagem tenha uma transição suave e um zoom ao passar o mouse sobre o 'group' pai
+                  
                     className="object-cover transition-transform duration-300 group-hover:scale-127"
                     unoptimized={true}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  {/* Overlay sutil ao passar o mouse */}
+                 
                   <div className="absolute inset-0 bg-black/80 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="text-white  text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       Ver Mais
@@ -118,3 +116,5 @@ export default function Home() {
     </div>
   );
 }
+
+

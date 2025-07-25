@@ -2,20 +2,20 @@
 import Image from 'next/image';
 
 interface TechIconProps {
-  src: string; // URL ou caminho local para o SVG do ícone
-  alt: string; // Texto alternativo para acessibilidade
-  name: string; // Nome da tecnologia
+  src: string;
+  alt: string; 
+  name: string;
 }
 
 const TechIcon: React.FC<TechIconProps> = ({ src, alt, name }) => (
   <div className="flex flex-col items-center justify-center p-4 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-    <div className="relative w-16 h-16 mb-2"> {/* Container para o ícone */}
+    <div className="relative w-16 h-16 mb-2"> 
       <Image
         src={src}
         alt={alt}
-        layout="fill" // Preenche o contêiner
-        objectFit="contain" // Garante que o ícone não seja cortado
-        unoptimized={true} // Se estiver usando SVGs externos ou não otimizados
+        layout="fill"
+        objectFit="contain" 
+        unoptimized={true} 
       />
     </div>
     <span className="text-white text-sm font-medium text-center">{name}</span>
@@ -35,9 +35,7 @@ export function TechStack() {
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg', alt: 'Firebase Icon', name: 'Firebase' },
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg', alt: 'Supabase Icon', name: 'Supabase' },
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg', alt: 'Material-UI Icon', name: 'Material UI' },
-    // Axios não tem um ícone oficial no Devicon, pode-se usar um ícone de requisição ou algo genérico
-    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1024px-Figma-logo.svg.png', alt: 'API Icon (Placeholder)', name: 'Axios' }, // Exemplo de placeholder ou ícone genérico
-    // Framer Motion não tem ícone Devicon, pode-se usar um ícone genérico ou do React
+    { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1024px-Figma-logo.svg.png', alt: 'API Icon (Placeholder)', name: 'Axios' }, 
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg', alt: 'Framer Motion Icon', name: 'Framer Motion' },
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg', alt: 'React Router Icon', name: 'React Router' },
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg', alt: 'Git Icon', name: 'Git' },
@@ -57,3 +55,4 @@ export function TechStack() {
     </section>
   );
 }
+

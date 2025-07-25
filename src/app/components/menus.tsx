@@ -109,7 +109,7 @@ export function Menus() {
           <div key={info.id}>
             <Link
               href={`/posts/${info.id}`}
-              className="hover:border-b-3 hover:border-blue-600 py-2 block overflow-hidden whitespace-nowrap text-ellipsis"
+              className="hover:border-b-3  w-fit  hover:border-blue-600 py-2 block overflow-hidden whitespace-nowrap text-ellipsis"
               onClick={() => setIsOpen(false)}
             >
               {info.title}

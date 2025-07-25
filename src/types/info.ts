@@ -1,12 +1,12 @@
 // src/types/info.ts
 
-// Renomeado para 'Post' para consistência com o schema GraphQL
+
 export interface Post {
   id: string;
   title: string;
   url: string;
   content: string;
-  imageUrl?: string[]; // Confirmando que é uma array de strings, e opcional
+  imageUrl?: string[];
 }
 
 export type InformationParams = {
@@ -14,3 +14,4 @@ export type InformationParams = {
     id: string;
   };
 };
+

@@ -1,6 +1,5 @@
+//src/app/components
 import Link from "next/link";
-
-
 
 export function Footer() {
   return (
