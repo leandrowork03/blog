@@ -61,13 +61,16 @@ export function Header() {
   };
 
   return (
-    <div className="relative w-full md:w-4xl font-black pt-3 flex md:block justify-end items-center" ref={menuRef}>
+    <div className="relative w-fit font-black pt-3 flex md:block justify-end items-center" ref={menuRef}>
+     <div>
+          
       <button
         onClick={toggleMenu}
         className="md:hidden p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
         aria-expanded={isOpen ? "true" : "false"}
         aria-controls="mobile-menu"
       >
+        
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -78,6 +81,7 @@ export function Header() {
           </svg>
         )}
       </button>
+        </div>
 
       <div
         id="mobile-menu"
@@ -86,7 +90,7 @@ export function Header() {
           md:flex
           md:flex-col
           absolute md:relative
-          top-0 right-0
+          top-0 left-0
           bg-gray-900 md:bg-transparent
           w-64 md:w-fit
           h-screen md:h-auto
