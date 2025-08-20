@@ -74,7 +74,7 @@ export default function Home() {
         </p>
       </section>
       <section className="my-3 bg-black/80 p-4">
-        <h1 className="text-3xl font-bold text-blue-600">Tecnologias usadas para fazer esse portfólio</h1>
+        <h1 className="text-3xl font-bold text-blue-600">Tecnologias usadas neste blog</h1>
         <p className="text-2xl font-bold">Next.JS, React, TypeScript, GraphQL, GraphQL Yoga, Apollo Client, Tailwind</p>
       </section>
 
